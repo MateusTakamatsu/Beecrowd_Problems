@@ -1,10 +1,6 @@
-ipt = input().split()
-nota1 = float(ipt[0])
-nota2 = float(ipt[1])
-nota3 = float(ipt[2])
-nota4 = float(ipt[3])
+ipt = [float(i) for i in input().split()]
 
-media = (2*nota1+3*nota2+4*nota3+nota4)/10
+media = (2*ipt[0]+3*ipt[1]+4*ipt[2]+ipt[3])/10
 print(f'Media: {media:.1f}')
 
 tabela = [[(round(media,1)<5),'reprovado'],[(5<=round(media,1)<=6.9),'em exame'],[(round(media,1)>=7),'aprovado']]
