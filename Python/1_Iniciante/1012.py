@@ -1,16 +1,9 @@
-ipt = input().split()
-a = float(ipt[0])
-b = float(ipt[1])
-c = float(ipt[2])
-
-triangulo = (a*c)/2
-circulo = 3.14159*c**2
-trapezio = ((a+b)*c)/2
-quadrado = b**2
-retangulo = a*b
+ipt = [float(i) for i in input().split()]
+a = ipt[0]
+b = ipt[1]
+c = ipt[2]
 
 # Seria mais fácil apenas dar 5 prints, mas decidi estudar fazer dessa forma
-array = ['triangulo', 'circulo', 'trapezio', 'quadrado', 'retangulo']
-for i in range (len(array)):
-    forma = array[i]
-    print(f'{forma.upper()}: {globals().get(forma):.3f}')
+array = [['TRIANGULO',((a*c)/2)],['CIRCULO',(3.14159*c**2)],['TRAPEZIO',(((a+b)*c)/2)],['QUADRADO',(b**2)],['RETANGULO',(a*b)]]
+for i in array:
+    print(f'{i[0]}: {i[1]:.3f}')
