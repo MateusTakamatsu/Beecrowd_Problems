@@ -5,7 +5,7 @@ puts "Media: %.1f" % media
 
 tabela = [[(media.round(1)<5),'reprovado'],[(5<=media.round(1) and media.round(1)<=6.9),'em exame'],[(media.round(1)>=7),'aprovado']]
 
-tabela.length().times() do |i|
+tabela.length().times do |i|
     if tabela[i][0]
         puts "Aluno #{tabela[i][1]}."
         if i==1
